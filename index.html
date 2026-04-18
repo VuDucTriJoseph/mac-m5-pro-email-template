@@ -101,15 +101,15 @@
       @media (prefers-color-scheme: dark) {
         body,
         table {
-          background: #2d2d2d !important;
+          background: #000 !important;
           color: #ffffff !important;
         }
         .darkmode-transparent {
           background-color: transparent !important;
         }
         [data-ogsc] body,
-        table {
-          background: #2d2d2d !important;
+        [data-ogsc] table {
+          background: #000000 !important;
           color: #ffffff !important;
         }
         [data-ogsc] .darkmode-transparent {
@@ -120,14 +120,14 @@
     <!--[if mso]>
       <style type="text/css">
         body {
-          background-color: #dde0e1 !important;
+          background-color: #000000 !important;
         }
         body,
         table,
         td,
         p,
         a {
-          font-family: Arial, Helvetica, sans-serif !important;
+          font-family: "Inter", Arial, Helvetica, sans-serif !important;
         }
         table {
           border-spacing: 0 !important;
@@ -142,16 +142,17 @@
   </head>
   <body
     class="body"
-    style="margin: 0; padding: 0; background-color: #000000; min-width: 100%"
+    xml:lang="en"
+    style="margin: 0; padding: 0; background-color: #ffffff; min-width: 100%"
   >
     <div
       style="
         width: 100%;
         font-size: 16px;
-        margin: 10 auto 10px;
+        margin: 10px auto 40px;
         table-layout: fixed;
-        background-color: #000;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #000;
         font-family: &quot;Inter&quot;, Arial, Helvetica, sans-serif;
       "
     >
@@ -188,7 +189,7 @@
           &zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;
         </div>
         <!--[if mso]>
-               <table width="600" align="center" style="border-spacing: 0; border-collapse: collapse; color: #3d3d3d;" role="presentation">
+               <table width="600" align="center" style="border-spacing: 0; border-collapse: collapse; color: #ffffff;" role="presentation">
                <tr>
                <td style="padding: 0;">
            <![endif]-->
@@ -210,7 +211,7 @@
         >
           <!--HERO SECTION-->
           <tr>
-            <td style="padding: 0; margin-bottom: 80px">
+            <td style="padding: 0">
               <table
                 width="100%"
                 style="
@@ -218,9 +219,8 @@
                   background-position: center;
                   background-repeat: no-repeat;
                   max-width: 600px;
-                  max-width: 600px;
+                  height: 100%;
                   background-size: cover;
-                  width: 100%;
                 "
                 role="presentation"
               >
@@ -268,101 +268,114 @@
           <!--CARDS FEATURE SECTION-->
 
           <tr>
-            <td
-              align="center"
-              style="padding: 80px 0 60px; text-align: center; font-size: 0"
-            >
+            <td align="center" style="padding: 40px 0">
               <!--[if mso]>
-              <table width="100%" style="border-spacing:0" role="presentation">
-              <tr>
-              <td width="300" style="padding:0">
-              <![endif]-->
+    <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+    <![endif]-->
+
               <table
-                class="card"
-                width="280"
-                height="231"
-                style="
-                  border-collapse: separate;
-                  padding: 0;
-                  background-color: #1c1c1e;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                  border-radius: 16px;
-                  margin: 5px;
-                  display: inline-block;
-                "
+                role="presentation"
+                width="100%"
+                style="max-width: 600px; border-spacing: 0"
               >
+                <!-- Row 1 -->
                 <tr>
-                  <td style="padding: 24px"></td>
+                  <!--[if mso]>
+        <td width="300" valign="top">
+        <![endif]-->
+                  <td class="column" width="50%" style="padding: 5px">
+                    <!-- Card 1 -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      style="
+                        background: #1c1c1e;
+                        border: 1px solid #333;
+                        border-radius: 16px;
+                        border-collapse: separate;
+                      "
+                    >
+                      <tr>
+                        <td style="padding: 20px; color: #ffffff">Card 1</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!--[if mso]></td><![endif]-->
+
+                  <!--[if mso]>
+        <td width="300" valign="top">
+        <![endif]-->
+                  <td class="column" width="50%" style="padding: 5px">
+                    <!-- Card 2 -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      style="
+                        background: #1c1c1e;
+                        border: 1px solid #333;
+                        border-radius: 16px;
+                        border-collapse: separate;
+                      "
+                    >
+                      <tr>
+                        <td style="padding: 20px; color: #ffffff">Card 2</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!--[if mso]></td><![endif]-->
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <!--[if mso]>
+        <td width="300" valign="top">
+        <![endif]-->
+                  <td class="column" width="50%" style="padding: 5px">
+                    <!-- Card 3 -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      style="
+                        background: #1c1c1e;
+                        border: 1px solid #333;
+                        border-radius: 16px;
+                        border-collapse: separate;
+                      "
+                    >
+                      <tr>
+                        <td style="padding: 20px; color: #ffffff">Card 3</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!--[if mso]></td><![endif]-->
+
+                  <!--[if mso]>
+        <td width="300" valign="top">
+        <![endif]-->
+                  <td class="column" width="50%" style="padding: 5px">
+                    <!-- Card 4 -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      style="
+                        background: #1c1c1e;
+                        border: 1px solid #333;
+                        border-radius: 16px;
+                        border-collapse: separate;
+                      "
+                    >
+                      <tr>
+                        <td style="padding: 20px; color: #ffffff">Card 4</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!--[if mso]></td><![endif]-->
                 </tr>
               </table>
+
               <!--[if mso]>
-              </td><td width="300" style="padding:0">
-              <![endif]-->
-              <table
-                class="card"
-                width="280"
-                height="231"
-                style="
-                  border-collapse: separate;
-                  padding: 0;
-                  background-color: #1c1c1e;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                  border-radius: 16px;
-                  margin: 5px;
-                  display: inline-block;
-                "
-              >
-                <tr>
-                  <td style="padding: 24px"></td>
-                </tr>
-              </table>
-              <!--[if mso]>
-              </td><td width="300" style="padding:0">
-              <![endif]-->
-              <table
-                class="card"
-                width="280"
-                height="231"
-                style="
-                  border-collapse: separate;
-                  padding: 0;
-                  background-color: #1c1c1e;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                  border-radius: 16px;
-                  margin: 5px;
-                  display: inline-block;
-                "
-              >
-                <tr>
-                  <td style="padding: 24px"></td>
-                </tr>
-              </table>
-              <!--[if mso]>
-              </td><td width="300" style="padding:0">
-              <![endif]-->
-              <table
-                class="card"
-                width="280"
-                height="231"
-                style="
-                  border-collapse: separate;
-                  padding: 0;
-                  background-color: #1c1c1e;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                  border-radius: 16px;
-                  margin: 5px;
-                  display: inline-block;
-                "
-              >
-                <tr>
-                  <td style="padding: 24px"></td>
-                </tr>
-              </table>
-              <!--[if mso]>
-              </td>
-              </tr>
-              </table>
-              <![endif]-->
+    </table>
+    <![endif]-->
             </td>
           </tr>
 
