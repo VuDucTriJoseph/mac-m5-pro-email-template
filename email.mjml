@@ -8,6 +8,27 @@
     <mj-attributes>
       <mj-all font-family="Inter, Roboto, Arial, sans-serif" />
     </mj-attributes>
+    <mj-style inline="inline">
+      .btn-gradient a {
+        background: #ff416c; /* Màu phẳng dự phòng cho Outlook */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #bf5af2,
+          #5e5ce6
+        ) !important;
+        background: linear-gradient(to bottom, #bf5af2, #5e5ce6) !important;
+      }
+      @media only screen and (max-width: 480px) {
+        /* Phóng to chiều cao của spacer trên Mobile để tạo khoảng cách dọc */
+        .mobile-gap td {
+          height: 15px !important;
+          line-height: 15px !important;
+        }
+        .btn-mobile td {
+          padding: 16px 100px !important;
+        }
+      }
+    </mj-style>
   </mj-head>
   <mj-body background-color="#000000">
     <mj-section
@@ -43,7 +64,7 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section>
+    <mj-section padding="80px 5px 0 5px">
       <mj-column
         width="48%"
         padding="24px"
@@ -75,6 +96,11 @@
           for seamless multitasking
         </mj-text>
       </mj-column>
+      <mj-column width="2%">
+        <mj-spacer height="0px" css-class="mobile-gap" />
+      </mj-column>
+      <!-- <mj-spacer height="10px" /> -->
+
       <mj-column
         width="48%"
         padding="24px"
@@ -107,9 +133,89 @@
         </mj-text></mj-column
       >
     </mj-section>
+    <mj-section padding="10px 5px 60px 5px">
+      <mj-column
+        width="48%"
+        padding="24px"
+        background-color="#1C1C1E"
+        border="1px solid rgba(256,256,256,.1)"
+        border-radius="16px"
+      >
+        <mj-image
+          align="left"
+          src="./image/icon-memory.png"
+          alt="icon memory"
+          width="40px"
+          padding-bottom="16px"
+        />
+        <mj-text
+          padding-bottom="16px"
+          color="#ffffff"
+          font-size="20px"
+          font-weight="bold"
+        >
+          Unified Memory</mj-text
+        >
+        <mj-text
+          color="#86868B"
+          line-height="22px"
+          font-size="14px"
+          font-weight="regular"
+          >Up to 192GB of superfast memory. Zero lag, even with the most massive
+          datasets.
+        </mj-text>
+      </mj-column>
+      <mj-column width="2%">
+        <mj-spacer height="0px" css-class="mobile-gap" />
+      </mj-column>
+
+      <!-- <mj-spacer height="10px" /> -->
+
+      <mj-column
+        width="48%"
+        padding="24px"
+        background-color="#1C1C1E"
+        border="1px solid rgba(256,256,256,.1)"
+        border-radius="16px"
+      >
+        <mj-image
+          align="left"
+          src="./image/icon-cooling.png"
+          alt="icon cooling"
+          width="40px"
+          padding-bottom="16px"
+        />
+        <mj-text
+          padding-bottom="16px"
+          color="#ffffff"
+          font-size="20px"
+          font-weight="bold"
+        >
+          Advanced Cooling</mj-text
+        >
+        <mj-text
+          color="#86868B"
+          line-height="22px"
+          font-size="14px"
+          font-weight="regular"
+          >Revolutionary thermal system remains whisper-quiet under heavy
+          workloads.
+        </mj-text></mj-column
+      >
+    </mj-section>
     <mj-section>
-      <mj-column width="50%"> </mj-column>
-      <mj-column width="50%"> </mj-column>
+      <mj-column>
+        <mj-button
+          inner-padding="16px 40px"
+          css-class="btn-gradient btn-mobile"
+          font-size="18px"
+          font-weight="bold"
+          border-radius="8px"
+          href="#"
+        >
+          Order Now</mj-button
+        >
+      </mj-column>
     </mj-section>
   </mj-body>
 </mjml>
