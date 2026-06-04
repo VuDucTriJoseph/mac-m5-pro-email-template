@@ -1,4 +1,4 @@
-<mjml>
+<mjml lang="en">
   <mj-head>
     <mj-title>Wellcome email mac pro m5</mj-title>
     <mj-font
@@ -8,62 +8,62 @@
     <mj-attributes>
       <mj-all font-family="Inter, Roboto, Arial, sans-serif" />
     </mj-attributes>
-    <mj-style inline="inline">
-      .btn-gradient a {
-        background: #ff416c; /* Màu phẳng dự phòng cho Outlook */
-        background: -webkit-linear-gradient(
-          to bottom,
-          #bf5af2,
-          #5e5ce6
-        ) !important;
-        background: linear-gradient(to bottom, #bf5af2, #5e5ce6) !important;
-      }
+    <mj-style>
       @media only screen and (max-width: 480px) {
-        /* Phóng to chiều cao của spacer trên Mobile để tạo khoảng cách dọc */
-        .mobile-gap td {
-          height: 15px !important;
-          line-height: 15px !important;
+        .mobile-h1 div {
+          font-size: 24px !important;
+          padding-bottom: 0px !important;
         }
-        .btn-mobile td {
-          padding: 16px 100px !important;
+        .mobile-des div {
+          font-size: 16px !important;
         }
       }
     </mj-style>
   </mj-head>
   <mj-body background-color="#000000">
-    <mj-section
-      background-url="./image/Ellipse2.png"
-      background-size="cover"
-      background-repeat="no-repeat"
-      padding="40px 20px"
-    >
+    <mj-section>
       <mj-column>
         <mj-image
-          src="./image/Gemini_Generated_Image_ga48zwga48zwga48.png"
-          alt="mac-m5-image"
-          border-radius="5px"
+          src="./image/myLogo.png"
+          alt="my logo"
+          align="center"
+          width="240px"
         />
-        <mj-text
-          color="#F5F5F7"
-          align="center"
-          font-size="48px"
-          font-weight="bold"
-          letter-spacing="-0.5px"
-          padding="40px 0 30px"
-        >
-          Power to the Pros</mj-text
-        >
-        <mj-text
-          color="#86868B"
-          align="center"
-          font-size="18px"
-          line-height="32px"
-          font-weight="regular"
-        >
-          The new Mac Pro with M5. Re-engineered for extreme performance
-        </mj-text>
       </mj-column>
     </mj-section>
+    <mj-hero
+      background-color="#000000"
+      background-url="./image/Ellipse2.png"
+      padding="40px 20px"
+    >
+      <mj-image
+        src="./image/Gemini_Generated_Image_ga48zwga48zwga48.png"
+        alt="mac-m5-image"
+        border-radius="5px"
+      />
+      <mj-text
+        color="#F5F5F7"
+        align="center"
+        font-size="48px"
+        font-weight="bold"
+        letter-spacing="-0.5px"
+        padding="40px 0 30px"
+        css-class="mobile-h1"
+      >
+        Power to the Pros</mj-text
+      >
+      <mj-text
+        padding="0 40px"
+        color="#86868B"
+        align="center"
+        font-size="18px"
+        font-weight="regular"
+        css-class="mobile-des"
+        line-height="100%"
+      >
+        The new Mac Pro with M5. Re-engineered for extreme performance
+      </mj-text>
+    </mj-hero>
     <mj-section padding="80px 5px 0 5px">
       <mj-column
         width="48%"
@@ -97,7 +97,7 @@
         </mj-text>
       </mj-column>
       <mj-column width="2%">
-        <mj-spacer height="0px" css-class="mobile-gap" />
+        <mj-spacer height="10px" />
       </mj-column>
       <!-- <mj-spacer height="10px" /> -->
 
@@ -166,7 +166,7 @@
         </mj-text>
       </mj-column>
       <mj-column width="2%">
-        <mj-spacer height="0px" css-class="mobile-gap" />
+        <mj-spacer height="10px" />
       </mj-column>
 
       <!-- <mj-spacer height="10px" /> -->
@@ -203,18 +203,47 @@
         </mj-text></mj-column
       >
     </mj-section>
+
+    <mj-section padding="0 40px 100px 40px">
+      <mj-column>
+        <mj-raw>
+          <style> .apple-btn { display: inline-block; color: #ffffff !important;
+          font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 18px;
+          font-weight: bold; text-decoration: none; border-radius: 8px; /* Đổ
+          dải màu Gradient */ background: #bf5af2; background:
+          linear-gradient(to bottom, #bf5af2, #5e5ce6); /* Padding mặc định cho
+          bản Desktop */ padding: 16px 40px; text-align: center; } /* Responsive
+          dành riêng cho Mobile */ @media only screen and (max-width: 480px) {
+          .apple-btn { display: block !important; /* Thay đổi padding tùy ý trên
+          Mobile tại đây */ padding: 14px 0px !important; font-size: 16px
+          !important; width: 100% !important; } /* Ép cái bảng thô giãn rộng
+          100% trên mobile */ .table-container { width: 100% !important; } }
+          </style> <table class="table-container" border="0" cellspacing="0"
+          cellpadding="0" align="center"> <tr> <td align="center"> <a href="#"
+          class="apple-btn">Order Now</a> </td> </tr> </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <mj-button
-          inner-padding="16px 40px"
-          css-class="btn-gradient btn-mobile"
-          font-size="18px"
-          font-weight="bold"
-          border-radius="8px"
-          href="#"
+        <mj-text align="center" color="#86868B" font-size="12px">
+          <a
+            href="#1"
+            target="_blank"
+            style="text-decoration: none; color: #86868b"
+            >Visit our Showroom</a
+          >
+          |
+          <a
+            href="#1"
+            target="_blank"
+            style="text-decoration: none; color: #86868b"
+            >View Online</a
+          ></mj-text
         >
-          Order Now</mj-button
-        >
+        <mj-text align="center" color="#86868B" font-size="12px"
+          >You're receiving this because you're a Mac enthusiast. Unsubscribe.
+        </mj-text>
       </mj-column>
     </mj-section>
   </mj-body>
