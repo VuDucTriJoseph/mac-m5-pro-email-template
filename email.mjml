@@ -31,40 +31,43 @@
         />
       </mj-column>
     </mj-section>
-    <mj-hero
+    <mj-section
       background-color="#000000"
       background-url="https://i.postimg.cc/W3Q4gm1j/Ellipse2.png"
       padding="40px 20px"
+      background-size="cover"
     >
-      <mj-image
-        src="https://i.postimg.cc/1tLzw03y/Gemini-Generated-Image-ga48zwga48zwga48.png"
-        alt="mac-m5-image"
-        border-radius="5px"
-      />
-      <mj-text
-        color="#F5F5F7"
-        align="center"
-        padding="40px 0 30px"
-        font-size="48px"
-        font-weight="bold"
-        css-class="mobile-h1"
-      >
-        <h1 style="font-size: 48px; font-weight: bold; color: #f5f5f7">
-          Power to the Pros
-        </h1>
-      </mj-text>
-      <mj-text
-        padding="0 40px"
-        color="#86868B"
-        align="center"
-        font-size="18px"
-        font-weight="regular"
-        css-class="mobile-des"
-        line-height="100%"
-      >
-        The new Mac Pro with M5. Re-engineered for extreme performance
-      </mj-text>
-    </mj-hero>
+      <mj-column>
+        <mj-image
+          src="https://i.postimg.cc/1tLzw03y/Gemini-Generated-Image-ga48zwga48zwga48.png"
+          alt="mac-m5-image"
+          border-radius="5px"
+        />
+        <mj-text
+          color="#F5F5F7"
+          align="center"
+          padding="40px 0 30px"
+          font-size="48px"
+          font-weight="bold"
+          css-class="mobile-h1"
+        >
+          <h1 style="font-size: 48px; font-weight: bold; color: #f5f5f7">
+            Power to the Pros
+          </h1>
+        </mj-text>
+        <mj-text
+          padding="0 40px"
+          color="#86868B"
+          align="center"
+          font-size="18px"
+          font-weight="regular"
+          css-class="mobile-des"
+          line-height="100%"
+        >
+          The new Mac Pro with M5. Re-engineered for extreme performance
+        </mj-text>
+      </mj-column>
+    </mj-section>
     <mj-section padding="80px 5px 0 5px">
       <mj-column
         width="48%"
