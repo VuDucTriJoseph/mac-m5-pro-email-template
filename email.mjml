@@ -1,6 +1,7 @@
 <mjml lang="en">
   <mj-head>
     <mj-title>Wellcome email mac pro m5</mj-title>
+
     <mj-font
       name="Inter"
       href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
@@ -19,6 +20,10 @@
         }
       }
     </mj-style>
+    <mj-preview>
+      Discover the new Mac Pro with M5. Extreme performance, re-engineered for
+      the ultimate pro experience.
+    </mj-preview>
   </mj-head>
   <mj-body background-color="#000000">
     <mj-section>
@@ -42,6 +47,7 @@
           src="https://i.postimg.cc/1tLzw03y/Gemini-Generated-Image-ga48zwga48zwga48.png"
           alt="mac-m5-image"
           border-radius="5px"
+          align="center"
         />
         <mj-text
           color="#F5F5F7"
