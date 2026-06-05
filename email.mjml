@@ -10,7 +10,7 @@
     </mj-attributes>
     <mj-style>
       @media only screen and (max-width: 480px) {
-        .mobile-h1 div {
+        .mobile-h1 h1 {
           font-size: 24px !important;
           padding-bottom: 0px !important;
         }
@@ -24,8 +24,8 @@
     <mj-section>
       <mj-column>
         <mj-image
-          src="./image/myLogo.png"
-          alt="my logo"
+          src="https://i.postimg.cc/bJKvk0wh/my-Logo.png"
+          alt="logo of developer"
           align="center"
           width="240px"
         />
@@ -33,25 +33,26 @@
     </mj-section>
     <mj-hero
       background-color="#000000"
-      background-url="./image/Ellipse2.png"
+      background-url="https://i.postimg.cc/W3Q4gm1j/Ellipse2.png"
       padding="40px 20px"
     >
       <mj-image
-        src="./image/Gemini_Generated_Image_ga48zwga48zwga48.png"
+        src="https://i.postimg.cc/1tLzw03y/Gemini-Generated-Image-ga48zwga48zwga48.png"
         alt="mac-m5-image"
         border-radius="5px"
       />
       <mj-text
         color="#F5F5F7"
         align="center"
+        padding="40px 0 30px"
         font-size="48px"
         font-weight="bold"
-        letter-spacing="-0.5px"
-        padding="40px 0 30px"
         css-class="mobile-h1"
       >
-        Power to the Pros</mj-text
-      >
+        <h1 style="font-size: 48px; font-weight: bold; color: #f5f5f7">
+          Power to the Pros
+        </h1>
+      </mj-text>
       <mj-text
         padding="0 40px"
         color="#86868B"
@@ -74,19 +75,16 @@
       >
         <mj-image
           align="left"
-          src="./image/icon-chip.png"
+          src="https://i.postimg.cc/zBLBy28z/icon-chip.png"
           alt="icon chip"
           width="40px"
           padding-bottom="16px"
         />
-        <mj-text
-          padding-bottom="16px"
-          color="#ffffff"
-          font-size="20px"
-          font-weight="bold"
-        >
-          M5 Pro Chip</mj-text
-        >
+        <mj-text padding-bottom="16px" color="#ffffff">
+          <h2 style="font-size: 20px; font-weight: bold; color: #ffffff">
+            M5 Pro Chip
+          </h2>
+        </mj-text>
         <mj-text
           color="#86868B"
           line-height="22px"
@@ -110,19 +108,16 @@
       >
         <mj-image
           align="left"
-          src="./image/icon-GPU.png"
+          src="https://i.postimg.cc/xCkCXpn1/icon-GPU.png"
           alt="icon gpu"
           width="40px"
           padding-bottom="16px"
         />
-        <mj-text
-          padding-bottom="16px"
-          color="#ffffff"
-          font-size="20px"
-          font-weight="bold"
-        >
-          Extreme GPU</mj-text
-        >
+        <mj-text padding-bottom="16px" color="#ffffff">
+          <h2 style="font-size: 20px; font-weight: bold; color: #ffffff">
+            Extreme GPU
+          </h2>
+        </mj-text>
         <mj-text
           color="#86868B"
           line-height="22px"
@@ -143,19 +138,16 @@
       >
         <mj-image
           align="left"
-          src="./image/icon-memory.png"
+          src="https://i.postimg.cc/76C65twL/icon-memory.png"
           alt="icon memory"
           width="40px"
           padding-bottom="16px"
         />
-        <mj-text
-          padding-bottom="16px"
-          color="#ffffff"
-          font-size="20px"
-          font-weight="bold"
-        >
-          Unified Memory</mj-text
-        >
+        <mj-text padding-bottom="16px" color="#ffffff">
+          <h2 style="font-size: 20px; font-weight: bold; color: #ffffff">
+            Unified Memory
+          </h2>
+        </mj-text>
         <mj-text
           color="#86868B"
           line-height="22px"
@@ -180,19 +172,16 @@
       >
         <mj-image
           align="left"
-          src="./image/icon-cooling.png"
+          src="https://i.postimg.cc/QtBtFYhX/icon-cooling.png"
           alt="icon cooling"
           width="40px"
           padding-bottom="16px"
         />
-        <mj-text
-          padding-bottom="16px"
-          color="#ffffff"
-          font-size="20px"
-          font-weight="bold"
-        >
-          Advanced Cooling</mj-text
-        >
+        <mj-text padding-bottom="16px" color="#ffffff">
+          <h2 style="font-size: 20px; font-weight: bold; color: #ffffff">
+            Advanced Cooling
+          </h2>
+        </mj-text>
         <mj-text
           color="#86868B"
           line-height="22px"
@@ -220,7 +209,8 @@
           100% trên mobile */ .table-container { width: 100% !important; } }
           </style> <table class="table-container" border="0" cellspacing="0"
           cellpadding="0" align="center"> <tr> <td align="center"> <a href="#"
-          class="apple-btn">Order Now</a> </td> </tr> </table>
+          class="apple-btn" aria-label="Order the new Mac Pro M5 now">Order
+          Now</a> </td> </tr> </table>
         </mj-raw>
       </mj-column>
     </mj-section>
@@ -231,6 +221,7 @@
             href="#1"
             target="_blank"
             style="text-decoration: none; color: #86868b"
+            aria-label="Visit our physical Showroom"
             >Visit our Showroom</a
           >
           |
@@ -238,11 +229,19 @@
             href="#1"
             target="_blank"
             style="text-decoration: none; color: #86868b"
+            aria-label="View this email in your web browser"
             >View Online</a
           ></mj-text
         >
         <mj-text align="center" color="#86868B" font-size="12px"
-          >You're receiving this because you're a Mac enthusiast. Unsubscribe.
+          >You're receiving this because you're a Mac enthusiast.
+          <a
+            href="#1"
+            target="_blank"
+            style="text-decoration: none; color: #86868b"
+            aria-label="Unsubscribe from this mailing list"
+            >Unsubscribe.</a
+          >
         </mj-text>
       </mj-column>
     </mj-section>
