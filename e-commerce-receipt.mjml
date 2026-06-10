@@ -1,0 +1,200 @@
+<mjml>
+  <mj-head>
+    <mj-title>Your Order Receipt</mj-title>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark"> <meta
+      name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-attributes>
+      <mj-all font-family="Inter, -apple-system, sans-serif" padding="0px" />
+      <mj-text color="#1d1d1f" font-size="14px" line-height="1.5" />
+      <mj-class name="text-muted" color="#86868b" font-size="12px" />
+      <mj-class name="price-bold" font-weight="700" font-size="16px" />
+    </mj-attributes>
+
+    <mj-style>
+      /* BƯỚC 2: CSS "HẮC ÁM" (Dùng !important để ghi đè inline-style) */
+      @media (prefers-color-scheme: dark) {
+        /* Đổi nền ngoài cùng thành đen tuyền */
+        body,
+        .dark-bg,
+        .dark-bg > div,
+        .dark-bg table,
+        .dark-bg td {
+          background-color: #000000 !important;
+        }
+
+        /* Đổi nền của thẻ Hóa đơn thành xám đen chuẩn Apple */
+        .dark-panel > table,
+        .dark-panel > div,
+        .dark-panel td {
+          background-color: #1c1c1e !important;
+        }
+
+        /* Đổi nền khu vực Tổng tiền thành xám nhạt hơn một chút để phân cấp */
+        .dark-totals > table,
+        .dark-totals > div,
+        .dark-totals td {
+          background-color: #2c2c2e !important;
+        }
+
+        /* Đảo ngược màu chữ: Đen thành Trắng */
+        .dark-text > div,
+        .dark-text td,
+        .dark-text strong,
+        .dark-text span {
+          color: #ffffff !important;
+        }
+
+        /* Làm dịu màu của các chữ phụ/ghi chú */
+        .dark-muted > div,
+        .dark-muted span {
+          color: #98989d !important;
+        }
+
+        /* Làm chìm các đường kẻ viền */
+        .dark-border {
+          border-color: #38383a !important;
+        }
+        .dark-border-bottom {
+          border-bottom: 1px solid #38383a !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#f5f5f7" css-class="dark-bg">
+    <mj-wrapper padding="40px 20px">
+      <mj-section
+        background-color="#ffffff"
+        border-radius="12px 12px 0 0"
+        padding="30px"
+        css-class="dark-panel"
+      >
+        <mj-column>
+          <mj-text
+            font-size="24px"
+            font-weight="800"
+            padding-bottom="10px"
+            css-class="dark-text"
+          >
+            Order Confirmed.
+          </mj-text>
+          <mj-text mj-class="text-muted" css-class="dark-muted">
+            Order #M5-987654321 • Date: Oct 24, 2025
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section
+        background-color="#ffffff"
+        padding="0 30px"
+        css-class="dark-panel"
+      >
+        <mj-column>
+          <mj-divider
+            border-width="1px"
+            border-color="#e5e5ea"
+            css-class="dark-border"
+          />
+        </mj-column>
+      </mj-section>
+
+      <mj-section
+        background-color="#ffffff"
+        padding="20px 30px"
+        css-class="dark-panel"
+      >
+        <mj-column>
+          <mj-table padding="0px" css-class="dark-text">
+            <tr
+              class="dark-border-bottom"
+              style="border-bottom: 1px solid #f2f2f7"
+            >
+              <td style="padding: 15px 0">
+                <strong>Mac Pro M5 (Standard Edition)</strong><br />
+                <span class="dark-muted" style="color: #86868b; font-size: 12px"
+                  >Space Gray / 64GB Unified Memory / 2TB SSD</span
+                >
+              </td>
+              <td style="padding: 15px 0; text-align: center">x1</td>
+              <td style="padding: 15px 0; text-align: right">
+                <strong>$5,999.00</strong>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 15px 0">
+                <strong>Pro Display XDR</strong><br />
+                <span class="dark-muted" style="color: #86868b; font-size: 12px"
+                  >Standard Glass / Pro Stand Included</span
+                >
+              </td>
+              <td style="padding: 15px 0; text-align: center">x1</td>
+              <td style="padding: 15px 0; text-align: right">
+                <strong>$4,999.00</strong>
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+
+      <mj-section
+        background-color="#fafafa"
+        border-radius="0 0 12px 12px"
+        padding="20px 30px 30px 30px"
+        css-class="dark-totals"
+      >
+        <mj-column width="100%">
+          <mj-table padding="0px" css-class="dark-text">
+            <tr>
+              <td style="padding: 5px 0; text-align: right">Subtotal:</td>
+              <td style="padding: 5px 0; text-align: right; width: 100px">
+                $10,998.00
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 0; text-align: right">Tax (VAT 8%):</td>
+              <td style="padding: 5px 0; text-align: right">$879.84</td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 15px 0 0 0;
+                  text-align: right;
+                  font-size: 18px;
+                  font-weight: bold;
+                "
+              >
+                Total:
+              </td>
+              <td
+                style="
+                  padding: 15px 0 0 0;
+                  text-align: right;
+                  font-size: 18px;
+                  font-weight: bold;
+                "
+              >
+                $11,877.84
+              </td>
+            </tr>
+          </mj-table>
+
+          <mj-button
+            href="#"
+            background-color="#0071e3"
+            color="#ffffff"
+            font-weight="600"
+            border-radius="8px"
+            padding-top="30px"
+            width="100%"
+          >
+            Track Your Shipment
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

@@ -1,0 +1,109 @@
+<mjml>
+  <mj-head>
+    <mj-title>Weekly Tech Newsletter</mj-title>
+    <mj-attributes>
+      <mj-all font-family="Helvetica Neue, Arial, sans-serif" padding="0px" />
+      <mj-text color="#333333" font-size="15px" line-height="1.6" />
+      <mj-class
+        name="category"
+        color="#0071e3"
+        font-size="12px"
+        font-weight="700"
+        text-transform="uppercase"
+        padding-bottom="5px"
+      />
+      <mj-class
+        name="title"
+        font-size="20px"
+        font-weight="700"
+        padding-bottom="10px"
+      />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body background-color="#eeeeee">
+    <mj-section padding="30px 0">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="28px"
+          font-weight="900"
+          letter-spacing="2px"
+        >
+          THE <span style="color: #0071e3">WIRE.</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="20px" border-radius="12px">
+      <mj-column width="48%" padding-bottom="20px">
+        <mj-image
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&h=400&fit=crop"
+          border-radius="8px"
+          padding-bottom="15px"
+          alt="Retro Tech"
+        />
+        <mj-text mj-class="category">Hardware Review</mj-text>
+        <mj-text mj-class="title">The Return of Retro Computing</mj-text>
+        <mj-text padding-bottom="15px">
+          Why developers are ditching modern setups for distraction-free vintage
+          terminals.
+        </mj-text>
+        <mj-button
+          href="#"
+          align="left"
+          background-color="transparent"
+          color="#0071e3"
+          border="1px solid #0071e3"
+          border-radius="6px"
+          padding="0px"
+        >
+          Read More
+        </mj-button>
+      </mj-column>
+
+      <mj-column width="4%"> </mj-column>
+
+      <mj-column width="48%" padding-bottom="20px">
+        <mj-image
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&h=400&fit=crop"
+          border-radius="8px"
+          padding-bottom="15px"
+          alt="Space Tech"
+        />
+        <mj-text mj-class="category">Space Exploration</mj-text>
+        <mj-text mj-class="title">Next Gen Satellite Networks</mj-text>
+        <mj-text padding-bottom="15px">
+          A deep dive into how new low-earth orbit constellations are changing
+          global connectivity.
+        </mj-text>
+        <mj-button
+          href="#"
+          align="left"
+          background-color="transparent"
+          color="#0071e3"
+          border="1px solid #0071e3"
+          border-radius="6px"
+          padding="0px"
+        >
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text align="center" color="#888888" font-size="12px">
+          You are receiving this email because you subscribed to The Wire.<br />
+          <a href="#" style="color: #888888; text-decoration: underline"
+            >Unsubscribe</a
+          >
+          |
+          <a href="#" style="color: #888888; text-decoration: underline"
+            >View in browser</a
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
