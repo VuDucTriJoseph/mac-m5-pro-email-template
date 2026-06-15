@@ -1,200 +1,232 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
-    <mj-title>Your Order Receipt</mj-title>
-
-    <mj-raw>
-      <meta name="color-scheme" content="light dark"> <meta
-      name="supported-color-schemes" content="light dark">
-    </mj-raw>
-
+    <mj-title>Your Order Receipt - Mac Pro M5</mj-title>
+    <mj-preview
+      >Thank you for your order! View your receipt and delivery status
+      inside.</mj-preview
+    >
+    <mj-font
+      name="Inter"
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    />
     <mj-attributes>
-      <mj-all font-family="Inter, -apple-system, sans-serif" padding="0px" />
-      <mj-text color="#1d1d1f" font-size="14px" line-height="1.5" />
-      <mj-class name="text-muted" color="#86868b" font-size="12px" />
-      <mj-class name="price-bold" font-weight="700" font-size="16px" />
+      <mj-all
+        font-family="'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+      />
+      <mj-text font-size="14px" color="#1D1D1F" line-height="1.5" />
     </mj-attributes>
-
     <mj-style>
-      /* BƯỚC 2: CSS "HẮC ÁM" (Dùng !important để ghi đè inline-style) */
-      @media (prefers-color-scheme: dark) {
-        /* Đổi nền ngoài cùng thành đen tuyền */
-        body,
-        .dark-bg,
-        .dark-bg > div,
-        .dark-bg table,
-        .dark-bg td {
-          background-color: #000000 !important;
-        }
-
-        /* Đổi nền của thẻ Hóa đơn thành xám đen chuẩn Apple */
-        .dark-panel > table,
-        .dark-panel > div,
-        .dark-panel td {
-          background-color: #1c1c1e !important;
-        }
-
-        /* Đổi nền khu vực Tổng tiền thành xám nhạt hơn một chút để phân cấp */
-        .dark-totals > table,
-        .dark-totals > div,
-        .dark-totals td {
-          background-color: #2c2c2e !important;
-        }
-
-        /* Đảo ngược màu chữ: Đen thành Trắng */
-        .dark-text > div,
-        .dark-text td,
-        .dark-text strong,
-        .dark-text span {
-          color: #ffffff !important;
-        }
-
-        /* Làm dịu màu của các chữ phụ/ghi chú */
-        .dark-muted > div,
-        .dark-muted span {
-          color: #98989d !important;
-        }
-
-        /* Làm chìm các đường kẻ viền */
-        .dark-border {
-          border-color: #38383a !important;
-        }
-        .dark-border-bottom {
-          border-bottom: 1px solid #38383a !important;
-        }
-      }
+      /* CSS Media Queries sẽ được viết tại đây */
     </mj-style>
   </mj-head>
-
-  <mj-body background-color="#f5f5f7" css-class="dark-bg">
-    <mj-wrapper padding="40px 20px">
-      <mj-section
-        background-color="#ffffff"
-        border-radius="12px 12px 0 0"
-        padding="30px"
-        css-class="dark-panel"
-      >
-        <mj-column>
+  <mj-body background-color="#e5e5ea">
+    <mj-wrapper
+      background-color="#ffffff"
+      padding="32px 20px"
+      border-radius="16px"
+    >
+      <!-- KHU VỰC 1: Header (Logo & Order ID) -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-image
+            src="./image/logo-light.png"
+            alt="my logo"
+            width="198px"
+            align="left"
+            padding="0"
+          />
           <mj-text
+            align="left"
             font-size="24px"
-            font-weight="800"
-            padding-bottom="10px"
-            css-class="dark-text"
-          >
-            Order Confirmed.
+            font-weight="bold"
+            color="#000000"
+            padding="24px 0px 8px 0px"
+            >Order Confirmed
           </mj-text>
-          <mj-text mj-class="text-muted" css-class="dark-muted">
-            Order #M5-987654321 • Date: Oct 24, 2025
+          <mj-text
+            align="left"
+            font-size="12px"
+            font-weight="bold"
+            color="#86868B"
+            padding="0px"
+          >
+            Order ID: W123456789 • June 15, 2026
           </mj-text>
         </mj-column>
       </mj-section>
 
-      <mj-section
-        background-color="#ffffff"
-        padding="0 30px"
-        css-class="dark-panel"
-      >
-        <mj-column>
+      <mj-section>
+        <mj-column width="100%">
           <mj-divider
             border-width="1px"
-            border-color="#e5e5ea"
-            css-class="dark-border"
+            border-color="#E5E5EA"
+            padding="24px 0px"
           />
         </mj-column>
       </mj-section>
 
-      <mj-section
-        background-color="#ffffff"
-        padding="20px 30px"
-        css-class="dark-panel"
-      >
-        <mj-column>
-          <mj-table padding="0px" css-class="dark-text">
-            <tr
-              class="dark-border-bottom"
-              style="border-bottom: 1px solid #f2f2f7"
+      <!-- KHU VỰC 2: Product List -->
+      <mj-section padding="0px">
+        <mj-group width="100%">
+          <mj-column width="18%" vertical-align="middle">
+            <mj-image
+              src="./image/m5_mini_product.jpeg"
+              alt="Mac Pro M5"
+              width="64px"
+              border="1px solid #1D1D1F"
+              border-radius="8px"
+              padding="0px"
+              align="left"
+            />
+          </mj-column>
+          <mj-column width="47%" vertical-align="middle" padding-left="12px">
+            <mj-text
+              font-size="14px"
+              font-weight="bold"
+              color="#1D1D1F"
+              padding="0px 0px 4px 0px"
             >
-              <td style="padding: 15px 0">
-                <strong>Mac Pro M5 (Standard Edition)</strong><br />
-                <span class="dark-muted" style="color: #86868b; font-size: 12px"
-                  >Space Gray / 64GB Unified Memory / 2TB SSD</span
-                >
-              </td>
-              <td style="padding: 15px 0; text-align: center">x1</td>
-              <td style="padding: 15px 0; text-align: right">
-                <strong>$5,999.00</strong>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 15px 0">
-                <strong>Pro Display XDR</strong><br />
-                <span class="dark-muted" style="color: #86868b; font-size: 12px"
-                  >Standard Glass / Pro Stand Included</span
-                >
-              </td>
-              <td style="padding: 15px 0; text-align: center">x1</td>
-              <td style="padding: 15px 0; text-align: right">
-                <strong>$4,999.00</strong>
-              </td>
-            </tr>
-          </mj-table>
-        </mj-column>
-      </mj-section>
+              Mac Pro M5 (standard)
+            </mj-text>
+            <mj-text font-size="12px" color="#86868B" padding="0px">
+              Space Black • 64GB • 2TB
+            </mj-text>
+          </mj-column>
 
-      <mj-section
-        background-color="#fafafa"
-        border-radius="0 0 12px 12px"
-        padding="20px 30px 30px 30px"
-        css-class="dark-totals"
-      >
+          <!-- CỘT 3: Số lượng -->
+          <mj-column width="10%" vertical-align="middle">
+            <mj-text
+              font-size="14px"
+              color="#86868B"
+              padding="0px"
+              align="center"
+            >
+              x1
+            </mj-text>
+          </mj-column>
+
+          <!-- CỘT 4: Giá tiền -->
+          <mj-column width="25%" vertical-align="middle">
+            <mj-text
+              font-size="16px"
+              font-weight="bold"
+              color="#1D1D1F"
+              padding="0px"
+              align="right"
+            >
+              $6,999.00
+            </mj-text>
+          </mj-column>
+        </mj-group>
         <mj-column width="100%">
-          <mj-table padding="0px" css-class="dark-text">
-            <tr>
-              <td style="padding: 5px 0; text-align: right">Subtotal:</td>
-              <td style="padding: 5px 0; text-align: right; width: 100px">
-                $10,998.00
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 5px 0; text-align: right">Tax (VAT 8%):</td>
-              <td style="padding: 5px 0; text-align: right">$879.84</td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 15px 0 0 0;
-                  text-align: right;
-                  font-size: 18px;
-                  font-weight: bold;
-                "
-              >
-                Total:
-              </td>
-              <td
-                style="
-                  padding: 15px 0 0 0;
-                  text-align: right;
-                  font-size: 18px;
-                  font-weight: bold;
-                "
-              >
-                $11,877.84
-              </td>
-            </tr>
-          </mj-table>
-
-          <mj-button
-            href="#"
-            background-color="#0071e3"
-            color="#ffffff"
-            font-weight="600"
-            border-radius="8px"
-            padding-top="30px"
-            width="100%"
-          >
-            Track Your Shipment
-          </mj-button>
+          <mj-divider
+            border-width="1px"
+            border-color="#E5E5EA"
+            padding="24px 0px"
+          />
         </mj-column>
       </mj-section>
+      <mj-section padding="0px">
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+            Subtotal
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text
+            font-size="14px"
+            font-weight="600"
+            color="#1D1D1F"
+            align="right"
+            padding="4px 0px"
+          >
+            $6,999.00
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Dòng 2: Phí giao hàng (Shipping) -->
+      <mj-section padding="0px">
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+            Shipping
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text
+            font-size="14px"
+            font-weight="600"
+            color="#1D1D1F"
+            align="right"
+            padding="4px 0px"
+          >
+            Free
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Dòng 3: Thuế (Estimated Tax) -->
+      <mj-section padding="0px">
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+            Tax (VAT 8%)
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text
+            font-size="14px"
+            font-weight="600"
+            color="#1D1D1F"
+            align="right"
+            padding="4px 0px"
+          >
+            $559.92
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- ĐƯỜNG KẺ TRƯỚC TỔNG CỘNG -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-divider
+            border-width="1px"
+            border-color="#E5E5EA"
+            padding="16px 0px"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- Dòng 4: TỔNG CỘNG (GRAND TOTAL) -->
+      <mj-section padding="0px">
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text
+            font-size="20px"
+            font-weight="bold"
+            color="#1D1D1F"
+            padding="0px"
+          >
+            Total
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+          <!-- Size chữ to hơn (20px) và in đậm (700) để nhấn mạnh -->
+          <mj-text
+            font-size="20px"
+            font-weight="700"
+            color="#1D1D1F"
+            align="right"
+            padding="0px"
+          >
+            $7,558.92
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- KHU VỰC 3: Progress Bar -->
+
+      <!-- KHU VỰC 4: Cross-sell -->
+
+      <!-- KHU VỰC 5: Footer & Utilities -->
     </mj-wrapper>
   </mj-body>
 </mjml>
