@@ -209,7 +209,6 @@
           </mj-text>
         </mj-column>
         <mj-column width="50%" vertical-align="middle">
-          <!-- Size chữ to hơn (20px) và in đậm (700) để nhấn mạnh -->
           <mj-text
             font-size="20px"
             font-weight="700"
@@ -221,8 +220,151 @@
           </mj-text>
         </mj-column>
       </mj-section>
+      <mj-section padding="24px">
+        <mj-column width="100%">
+          <mj-button
+            href="#"
+            background-color="#0071e3"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            border-radius="8px"
+            width="100%"
+            padding="0"
+            inner-padding="16px 24px"
+          >
+            Track Your Shipment
+          </mj-button>
+        </mj-column>
+      </mj-section>
 
       <!-- KHU VỰC 3: Progress Bar -->
+      <!-- ĐƯỜNG PHÂN CÁCH TRƯỚC TRACKING -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-divider
+            border-width="1px"
+            border-color="#E5E5EA"
+            padding="24px 0px 32px 0px"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- KHU VỰC 4: TIẾN TRÌNH GIAO HÀNG (SHIPPING TRACKER) -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-text
+            font-size="18px"
+            font-weight="700"
+            color="#1D1D1F"
+            padding="0px 0px 16px 0px"
+          >
+            Delivery Status
+          </mj-text>
+
+          <!-- Nhúng HTML thuần qua mj-raw để thiết lập WAI-ARIA -->
+          <mj-raw>
+            <div role="progressbar" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="100" aria-label="Order is currently being processed">
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- Dùng mj-group để 4 bước giao hàng dính chặt trên 1 hàng ngang -->
+      <mj-section padding="0px">
+        <mj-group width="100%">
+          <!-- Bước 1: Ordered (Hoàn thành - Nhấn mạnh bằng chữ đậm và màu đen) -->
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="18px"
+              color="#1D1D1F"
+              padding="0px"
+            >
+              ●
+            </mj-text>
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="700"
+              color="#1D1D1F"
+              padding="8px 0px 0px 0px"
+            >
+              Ordered
+            </mj-text>
+          </mj-column>
+
+          <!-- Bước 2: Processing (Trạng thái hiện tại) -->
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="18px"
+              color="#1D1D1F"
+              padding="0px"
+            >
+              ●
+            </mj-text>
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="700"
+              color="#1D1D1F"
+              padding="8px 0px 0px 0px"
+            >
+              Processing
+            </mj-text>
+          </mj-column>
+
+          <!-- Bước 3: Shipped (Chưa tới - Làm mờ đi bằng màu xám) -->
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="18px"
+              color="#E5E5EA"
+              padding="0px"
+            >
+              ●
+            </mj-text>
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="400"
+              color="#86868B"
+              padding="8px 0px 0px 0px"
+            >
+              Shipped
+            </mj-text>
+          </mj-column>
+
+          <!-- Bước 4: Delivered (Chưa tới) -->
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="18px"
+              color="#E5E5EA"
+              padding="0px"
+            >
+              ●
+            </mj-text>
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="400"
+              color="#86868B"
+              padding="8px 0px 0px 0px"
+            >
+              Delivered
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <!-- Đóng thẻ progressbar -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-raw> </div> </mj-raw>
+        </mj-column>
+      </mj-section>
 
       <!-- KHU VỰC 4: Cross-sell -->
 
