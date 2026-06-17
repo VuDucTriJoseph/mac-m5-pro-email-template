@@ -366,6 +366,92 @@
         </mj-column>
       </mj-section>
 
+      <!-- KHU VỰC 4: TIẾN TRÌNH GIAO HÀNG (HYBRID PROGRESS BAR) -->
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-text
+            font-size="18px"
+            font-weight="700"
+            color="#1D1D1F"
+            padding="0px 0px 16px 0px"
+          >
+            Delivery Status
+          </mj-text>
+
+          <mj-raw>
+            <div role="progressbar" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="100" aria-label="Order is currently being processed">
+          </mj-raw>
+
+          <!-- Tấm ảnh thanh ngang + dấu chấm tròn bạn xuất từ Figma -->
+          <mj-image
+            src="./image/process_bar_state_1.png"
+            alt="Progress: Processing"
+            padding="0px 16px 8px 16px"
+            align="center"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- Dùng mj-group để 4 nhãn text căn lề thẳng hàng với 4 dấu chấm trên ảnh -->
+      <mj-section padding="0px">
+        <mj-group width="100%">
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="700"
+              color="#1D1D1F"
+              padding="0px"
+            >
+              Ordered
+            </mj-text>
+          </mj-column>
+
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="700"
+              color="#1D1D1F"
+              padding="0px"
+            >
+              Processing
+            </mj-text>
+          </mj-column>
+
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="400"
+              color="#86868B"
+              padding="0px"
+            >
+              Shipped
+            </mj-text>
+          </mj-column>
+
+          <mj-column width="25%">
+            <mj-text
+              align="center"
+              font-size="12px"
+              font-weight="400"
+              color="#86868B"
+              padding="0px"
+            >
+              Delivered
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <mj-section padding="0px">
+        <mj-column width="100%">
+          <mj-raw> </div> </mj-raw>
+        </mj-column>
+      </mj-section>
+
       <!-- KHU VỰC 4: Cross-sell -->
 
       <!-- KHU VỰC 5: Footer & Utilities -->
