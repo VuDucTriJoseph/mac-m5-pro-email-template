@@ -5,6 +5,10 @@
       >Thank you for your order! View your receipt and delivery status
       inside.</mj-preview
     >
+    <mj-raw>
+      <meta name="color-scheme" content="light dark"> <meta
+      name="supported-color-schemes" content="light dark">
+    </mj-raw>
     <mj-font
       name="Inter"
       href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
@@ -14,26 +18,97 @@
         font-family="'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
       />
       <mj-text font-size="14px" color="#1D1D1F" line-height="1.5" />
+      <mj-class name="hidden-defald" display="none" />
     </mj-attributes>
+
     <mj-style>
-      /* CSS Media Queries sẽ được viết tại đây */
+      .dark-logo {
+        display: none !important;
+        mso-hide: all !important;
+        overflow: hidden;
+        max-height: 0px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        /* 1. Lật màu nền ứng dụng (Body) sang Xám đen đậm */
+        body,
+        .body-bg,
+        div[css-class="body-bg"],
+        table[id="outlook-holder"] {
+          background-color: #121212 !important;
+        }
+
+        /* Hack ép màu nền cho toàn bộ các thẻ div lớn chứa nội dung */
+        .body-bg > div {
+          background-color: #121212 !important;
+        }
+
+        /* 2. Lật màu nền tờ Hóa đơn (Wrapper) sang màu Xám iOS chuẩn (#1C1C1E) */
+        .dark-wrapper > table {
+          background-color: #1c1c1e !important;
+        }
+        .dark-crosssell-bg > table {
+          background-color: #38383a !important;
+          border-color: #3a3a3c !important;
+        }
+        .dark-crosssell-col-bg > table {
+          background-color: #2c2c2e !important;
+        }
+
+        /* 3. Lật toàn bộ chữ Tiêu đề và Văn bản chính sang màu Trắng/Xám sáng Apple (#F5F5F7) */
+        .dark-text div,
+        .dark-title div {
+          color: #f5f5f7 !important;
+        }
+
+        /* 4. Lật chữ chú thích phụ sang màu Xám sáng hơn để đảm bảo độ tương phản */
+        .dark-subtext div {
+          color: #a1a1a6 !important;
+        }
+
+        /* 5. Ép các đường kẻ phân cách chuyển sang màu xám tối */
+        .dark-divider p {
+          border-color: #3a3a3c !important;
+        }
+        .light-logo {
+          display: none !important;
+        }
+        .dark-logo {
+          display: block !important;
+          max-height: none !important;
+          overflow: visible !important;
+          float: none !important;
+        }
+      }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#e5e5ea">
+  <mj-body background-color="#e5e5ea" css-class="body-bg">
     <mj-wrapper
       background-color="#ffffff"
       padding="32px 20px"
       border-radius="16px"
+      css-class="dark-wrapper"
     >
       <!-- KHU VỰC 1: Header (Logo & Order ID) -->
       <mj-section padding="0px">
         <mj-column width="100%">
           <mj-image
+            css-class="light-logo"
             src="./image/logo-light.png"
-            alt="my logo"
+            alt="Brand Logo"
             width="198px"
             align="left"
-            padding="0"
+            padding="0px"
+          />
+
+          <mj-image
+            css-class="dark-logo"
+            mj-class="hidden-defald"
+            src="./image/logo-dark.png"
+            alt="Brand Logo"
+            width="198px"
+            align="left"
+            padding="0px"
           />
           <mj-text
             align="left"
@@ -41,6 +116,7 @@
             font-weight="bold"
             color="#000000"
             padding="24px 0px 8px 0px"
+            css-class="dark-text"
             >Order Confirmed
           </mj-text>
           <mj-text
@@ -49,6 +125,7 @@
             font-weight="bold"
             color="#86868B"
             padding="0px"
+            css-class="dark-subtext"
           >
             Order ID: W123456789 • June 15, 2026
           </mj-text>
@@ -58,6 +135,7 @@
       <mj-section>
         <mj-column width="100%">
           <mj-divider
+            css-class="dark-divider"
             border-width="1px"
             border-color="#E5E5EA"
             padding="24px 0px"
@@ -72,6 +150,7 @@
             font-weight="700"
             color="#1D1D1F"
             padding="0px 0px 16px 0px"
+            css-class="dark-text"
           >
             Delivery Status
           </mj-text>
@@ -101,6 +180,7 @@
               font-weight="700"
               color="#1D1D1F"
               padding="0px"
+              css-class="dark-text"
             >
               Ordered
             </mj-text>
@@ -113,6 +193,7 @@
               font-weight="400"
               color="#86868B"
               padding="0px"
+              css-class="dark-subtext"
             >
               Shipped
             </mj-text>
@@ -125,6 +206,7 @@
               font-weight="400"
               color="#86868B"
               padding="0px"
+              css-class="dark-subtext"
             >
               Delivered
             </mj-text>
@@ -141,6 +223,7 @@
       <mj-section>
         <mj-column width="100%">
           <mj-divider
+            css-class="dark-divider"
             border-width="1px"
             border-color="#E5E5EA"
             padding="24px 0px"
@@ -168,10 +251,16 @@
               font-weight="bold"
               color="#1D1D1F"
               padding="0px 0px 4px 0px"
+              css-class="dark-text"
             >
               Mac Pro M5 (standard)
             </mj-text>
-            <mj-text font-size="12px" color="#86868B" padding="0px">
+            <mj-text
+              font-size="12px"
+              color="#86868B"
+              padding="0px"
+              css-class="dark-subtext"
+            >
               Space Black • 64GB • 2TB
             </mj-text>
           </mj-column>
@@ -183,6 +272,7 @@
               color="#86868B"
               padding="0px"
               align="center"
+              css-class="dark-subtext"
             >
               x1
             </mj-text>
@@ -196,6 +286,7 @@
               color="#1D1D1F"
               padding="0px"
               align="right"
+              css-class="dark-text"
             >
               $6,999.00
             </mj-text>
@@ -206,12 +297,18 @@
             border-width="1px"
             border-color="#E5E5EA"
             padding="24px 0px"
+            css-class="dark-divider"
           />
         </mj-column>
       </mj-section>
       <mj-section padding="0px">
         <mj-column width="50%" vertical-align="middle">
-          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+          <mj-text
+            font-size="14px"
+            color="#86868B"
+            padding="4px 0px"
+            css-class="dark-subtext"
+          >
             Subtotal
           </mj-text>
         </mj-column>
@@ -222,6 +319,7 @@
             color="#1D1D1F"
             align="right"
             padding="4px 0px"
+            css-class="dark-text"
           >
             $6,999.00
           </mj-text>
@@ -231,7 +329,12 @@
       <!-- Dòng 2: Phí giao hàng (Shipping) -->
       <mj-section padding="0px">
         <mj-column width="50%" vertical-align="middle">
-          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+          <mj-text
+            font-size="14px"
+            color="#86868B"
+            padding="4px 0px"
+            css-class="dark-subtext"
+          >
             Shipping
           </mj-text>
         </mj-column>
@@ -242,6 +345,7 @@
             color="#1D1D1F"
             align="right"
             padding="4px 0px"
+            css-class="dark-text"
           >
             Free
           </mj-text>
@@ -251,7 +355,12 @@
       <!-- Dòng 3: Thuế (Estimated Tax) -->
       <mj-section padding="0px">
         <mj-column width="50%" vertical-align="middle">
-          <mj-text font-size="14px" color="#86868B" padding="4px 0px">
+          <mj-text
+            font-size="14px"
+            color="#86868B"
+            padding="4px 0px"
+            css-class="dark-subtext"
+          >
             Tax (VAT 8%)
           </mj-text>
         </mj-column>
@@ -262,6 +371,7 @@
             color="#1D1D1F"
             align="right"
             padding="4px 0px"
+            css-class="dark-text"
           >
             $559.92
           </mj-text>
@@ -275,6 +385,7 @@
             border-width="1px"
             border-color="#E5E5EA"
             padding="16px 0px"
+            css-class="dark-divider"
           />
         </mj-column>
       </mj-section>
@@ -287,6 +398,7 @@
             font-weight="bold"
             color="#1D1D1F"
             padding="0px"
+            css-class="dark-text"
           >
             Total
           </mj-text>
@@ -298,6 +410,7 @@
             color="#1D1D1F"
             align="right"
             padding="0px"
+            css-class="dark-text"
           >
             $7,558.92
           </mj-text>
@@ -329,6 +442,7 @@
             border-width="1px"
             border-color="#E5E5EA"
             padding="24px 0px 32px 0px"
+            css-class="dark-divider"
           />
         </mj-column>
       </mj-section>
@@ -337,155 +451,33 @@
 
       <!-- KHU VỰC 4: Cross-sell -->
 
-      <!-- <mj-section padding="0px">
-        <mj-column width="100%">
-          <mj-text
-            font-size="18px"
-            font-weight="700"
-            color="#1D1D1F"
-            padding="0px 0px 16px 0px"
-          >
-            Complete Your Setup
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <mj-section padding="0px">
-        <mj-column width="50%" padding="0px 8px 16px 0px">
-          <mj-table padding="0px">
-            <tr
-              style="
-                border: 1px solid #e5e5ea;
-                border-radius: 12px;
-                display: block;
-                padding: 16px;
-                text-align: center;
-              "
-            >
-              <td>
-                <img
-                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/pro-display-xdr-gallery1-201909"
-                  alt="Pro Display XDR"
-                  width="120"
-                  style="margin-bottom: 12px"
-                />
-                <div
-                  style="
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #1d1d1f;
-                    margin-bottom: 4px;
-                    font-family: -apple-system, sans-serif;
-                  "
-                >
-                  Pro Display XDR
-                </div>
-                <div
-                  style="
-                    font-size: 14px;
-                    color: #86868b;
-                    margin-bottom: 12px;
-                    font-family: -apple-system, sans-serif;
-                  "
-                >
-                  $4,999.00
-                </div>
-                <a
-                  href="#"
-                  style="
-                    background-color: #f5f5f7;
-                    color: #0071e3;
-                    font-size: 12px;
-                    font-weight: 600;
-                    text-decoration: none;
-                    padding: 8px 16px;
-                    border-radius: 16px;
-                    display: inline-block;
-                    font-family: -apple-system, sans-serif;
-                  "
-                  >View Details</a
-                >
-              </td>
-            </tr>
-          </mj-table>
-        </mj-column>
-
-        <mj-column width="50%" padding="0px 0px 16px 8px">
-          <mj-table padding="0px" align="center">
-            <tr
-              style="
-                border: 1px solid #e5e5ea;
-                border-radius: 12px;
-                display: block;
-                padding: 16px;
-                text-align: center;
-              "
-            >
-              <td>
-                <img
-                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/magic-keyboard-num-sil-gallery-1"
-                  alt="Magic Keyboard"
-                  width="120"
-                  style="margin-bottom: 12px"
-                />
-                <div
-                  style="
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #1d1d1f;
-                    margin-bottom: 4px;
-                    font-family: -apple-system, sans-serif;
-                  "
-                >
-                  Magic Keyboard
-                </div>
-                <div
-                  style="
-                    font-size: 14px;
-                    color: #86868b;
-                    margin-bottom: 12px;
-                    font-family: -apple-system, sans-serif;
-                  "
-                >
-                  $129.00
-                </div>
-                <a
-                  href="#"
-                  style="
-                    background-color: #f5f5f7;
-                    color: #0071e3;
-                    font-size: 12px;
-                    font-weight: 600;
-                    text-decoration: none;
-                    padding: 8px 16px;
-                    border-radius: 16px;
-                    display: inline-block;
-                    font-family: -apple-system, sans-serif;
-                  "
-                  >View Details</a
-                >
-              </td>
-            </tr>
-          </mj-table>
-        </mj-column>
-      </mj-section> -->
       <mj-section
         border="solid 1px #E5E5EA"
         border-radius="8px"
         padding="19px 29px"
+        css-class="dark-crosssell-bg"
       >
-        <mj-column width="100%" background-color="#fafafa">
+        <mj-column
+          width="100%"
+          background-color="#fafafa"
+          css-class="dark-crosssell-col-bg"
+        >
           <mj-text
             font-size="18px"
             font-weight="700"
             color="#1D1D1F"
-            padding="0px 0px 16px 0px"
+            padding="16px 0px 16px 0px"
             align="center"
+            css-class="dark-text"
           >
             Complete Your Setup
           </mj-text>
         </mj-column>
-        <mj-column width="50%" background-color="#fafafa">
+        <mj-column
+          width="50%"
+          background-color="#fafafa"
+          css-class="dark-crosssell-col-bg"
+        >
           <mj-image
             src="./image/keyboard_crosssel.png"
             alt="keyboard"
@@ -498,6 +490,7 @@
             align="center"
             color="#000000"
             padding-bottom="8px"
+            css-class="dark-text"
           >
             Magic Keyboard</mj-text
           >
@@ -507,6 +500,7 @@
             align="center"
             color="#86868b"
             padding-bottom="8px"
+            css-class="dark-subtext"
           >
             $199.00</mj-text
           >
@@ -514,13 +508,11 @@
             <a
               href="#"
               style="
-                background-color: #f5f5f7;
                 color: #0071e3;
                 font-size: 14px;
                 font-weight: bold;
                 text-decoration: none;
 
-                border-radius: 16px;
                 display: inline-block;
                 font-family: -apple-system, sans-serif;
               "
@@ -528,7 +520,11 @@
             ></mj-text
           ></mj-column
         >
-        <mj-column width="50%" background-color="#fafafa">
+        <mj-column
+          width="50%"
+          background-color="#fafafa"
+          css-class="dark-crosssell-col-bg"
+        >
           <mj-image
             src="./image/mouse_logi_crosssell.png"
             alt="keyboard"
@@ -541,6 +537,7 @@
             align="center"
             color="#000000"
             padding-bottom="8px"
+            css-class="dark-text"
           >
             Magic Mouse</mj-text
           >
@@ -550,6 +547,7 @@
             align="center"
             color="#86868b"
             padding-bottom="8px"
+            css-class="dark-subtext"
           >
             $99.00</mj-text
           >
@@ -557,13 +555,11 @@
             <a
               href="#"
               style="
-                background-color: #f5f5f7;
                 color: #0071e3;
                 font-size: 14px;
                 font-weight: bold;
                 text-decoration: none;
 
-                border-radius: 16px;
                 display: inline-block;
                 font-family: -apple-system, sans-serif;
               "
