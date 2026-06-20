@@ -160,7 +160,6 @@
             aria-valuemax="100" aria-label="Order is currently being processed">
           </mj-raw>
 
-          <!-- Tấm ảnh thanh ngang + dấu chấm tròn bạn xuất từ Figma -->
           <mj-image
             src="./image/process_bar_state_1.png"
             alt="Progress: Processing"
@@ -170,7 +169,6 @@
         </mj-column>
       </mj-section>
 
-      <!-- Dùng mj-group để 4 nhãn text căn lề thẳng hàng với 4 dấu chấm trên ảnh -->
       <mj-section padding="0px">
         <mj-group width="100%">
           <mj-column>
@@ -219,6 +217,15 @@
           <mj-raw> </div> </mj-raw>
         </mj-column>
       </mj-section>
+      
+        
+      </mj-wrapper>
+      <mj-wrapper
+      background-color="#ffffff"
+      padding="32px 20px"
+      border-radius="16px"
+      css-class="dark-wrapper"
+    >
 
       <mj-section>
         <mj-column width="100%">
@@ -236,7 +243,7 @@
         <mj-group width="100%">
           <mj-column width="18%" vertical-align="middle">
             <mj-image
-              src="./image/m5_mini_product.jpeg"
+              src="./image/Product_img_1_dark.png"
               alt="Mac Pro M5"
               width="64px"
               border="1px solid #1D1D1F"
